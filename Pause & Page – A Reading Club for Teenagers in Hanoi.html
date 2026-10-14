@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pause &amp; Page – A Reading Club for Teenagers in Hanoi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#fff;--bg2:#f5f5f7;--tx:#1d1d1f;--mu:#6e6e73;--ac:#8b1a1a;--ac2:#fbeaea;--ln:#d2d2d7;--card:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--bg2:#111113;--tx:#f5f5f7;--mu:#a1a1a6;--ac:#ff5a5f;--ac2:#2a1213;--ln:#38383a;--card:#1c1c1e}}
+:root[data-theme="dark"]{--bg:#000;--bg2:#111113;--tx:#f5f5f7;--mu:#a1a1a6;--ac:#ff5a5f;--ac2:#2a1213;--ln:#38383a;--card:#1c1c1e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","San Francisco",Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:19px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1{font-size:clamp(3rem,10vw,7rem);font-weight:800;line-height:1;letter-spacing:-.045em}
+h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:700;line-height:1.05;letter-spacing:-.035em}
+h3{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+a{color:var(--ac)}
+.dk{background:#000;color:#f5f5f7;--mu:#a1a1a6;--card:#161618;--ln:#38383a;--ac:#ff5a5f;--ac2:#2a1213}
+.lt2{background:var(--bg2)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;height:48px;background:rgba(22,22,23,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px)}
+.nav{max-width:1024px;height:100%;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:8px;color:#f5f5f7;text-decoration:none;font-weight:600;font-size:15px}
+.logo svg{width:26px;height:26px}
+.links{display:flex;gap:28px;align-items:center}
+.links a{color:#d2d2d7;text-decoration:none;font-size:12px}
+.links a:hover{color:#fff}
+.pill{display:inline-block;background:#e5484d;color:#fff!important;padding:12px 28px;border-radius:980px;font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.pill.sm{padding:5px 14px;font-size:12px}
+.lnk{color:var(--ac);text-decoration:none;font-size:21px}
+.lnk::after{content:" \203A"}
+.lnk:hover{text-decoration:underline}
+section{padding:120px 22px;overflow:hidden}
+.wrap{max-width:1024px;margin:auto}
+.c{text-align:center}
+.eb{color:var(--ac);font-weight:600;font-size:1.2rem;margin-bottom:12px}
+.sub{font-size:clamp(1.2rem,2.6vw,1.75rem);color:var(--mu);font-weight:500;max-width:760px;margin:20px auto 0;line-height:1.3;letter-spacing:-.01em}
+.c .sub{margin-inline:auto}
+.acts{display:flex;gap:28px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:32px}
+.hero{padding:96px 22px 0}
+.grad{background:linear-gradient(90deg,#ff8a8f,#ff5a5f 45%,#ffb199);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.heroimg{margin:64px auto 0;max-width:1100px}
+.heroimg svg,.shot svg{display:block;width:100%;height:auto}
+.heroimg svg{border-radius:28px 28px 0 0}
+.bento{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:64px}
+.tile{background:var(--card);border-radius:28px;padding:40px;overflow:hidden}
+.tile.img{padding:0;display:flex;flex-direction:column}
+.tile.img .t{padding:28px 32px 32px}
+.tile p{color:var(--mu);margin-top:10px;font-size:1.05rem}
+.big{font-size:clamp(3.5rem,9vw,5.5rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--ac);margin-bottom:12px}
+.src{font-size:.78rem!important;color:var(--mu);margin-top:14px!important}
+.time{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;color:var(--ac);margin-bottom:6px}
+.bars{margin:48px auto 0;max-width:760px}
+.bar{display:grid;grid-template-columns:170px 1fr;gap:16px;align-items:center;margin:14px 0;font-size:1rem}
+.track{background:var(--bg2);border-radius:99px;height:36px;overflow:hidden}
+.lt2 .track{background:var(--bg)}
+.fill{height:100%;border-radius:99px;background:#8e8e93;color:#fff;font-size:.9rem;font-weight:600;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;white-space:nowrap}
+.fill.w{background:var(--ac)}
+.dk .fill.w,.fill.w{color:#fff}
+blockquote{margin:0;padding:36px;background:var(--card);border-radius:28px}
+blockquote p{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;line-height:1.25;color:var(--tx)}
+blockquote cite{display:block;margin-top:14px;color:var(--mu);font-size:.9rem;font-style:normal}
+details{background:var(--card);border-radius:20px;padding:22px 28px;margin-bottom:12px}
+summary{font-weight:600;font-size:1.2rem;cursor:pointer}
+details p{margin-top:12px;color:var(--mu)}
+.join{background:radial-gradient(120% 120% at 50% 0%,#8b1a1a 0%,#3a0a0a 55%,#000 100%);color:#fff}
+form{display:grid;gap:16px;max-width:460px;margin:48px auto 0;text-align:left}
+label{font-weight:600;font-size:.9rem}
+input,select{width:100%;padding:15px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font:inherit;margin-top:6px}
+select option{color:#000}
+input::placeholder{color:#d9a5a5}
+.join .pill{background:#fff;color:#8b1a1a!important}
+.ava{width:72px;height:72px;border-radius:50%;background:var(--ac2);color:var(--ac);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;margin-bottom:18px}
+.ico{width:48px;height:48px;margin-bottom:18px}
+.cap{font-size:.85rem;color:var(--mu);margin-top:12px}
+footer{background:var(--bg2);padding:36px 22px;color:var(--mu);font-size:.8rem;text-align:center}
+footer .logo{color:var(--tx);justify-content:center;margin-bottom:10px}
+.js .rv{opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:734px){.links a:not(.pill){display:none}section{padding:80px 20px}.bar{grid-template-columns:1fr;gap:6px}.tile{padding:28px}.hero{padding-top:64px}}
+
+.hero{background:radial-gradient(55% 45% at 18% 0%,rgba(229,72,77,.38),transparent 70%),radial-gradient(45% 40% at 88% 8%,rgba(255,150,100,.22),transparent 70%),#000}
+.heroimg{position:relative;padding:0 12px}
+.heroimg img{display:block;width:100%;aspect-ratio:16/8.5;object-fit:cover;border-radius:28px 28px 0 0;box-shadow:0 -10px 80px rgba(229,72,77,.25)}
+.chip{position:absolute;background:rgba(20,20,22,.72);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 18px;font-size:.9rem;font-weight:600;text-align:left;line-height:1.3}
+.chip small{display:block;color:#c7c7cc;font-weight:500;font-size:.78rem}
+.chip.a{left:36px;bottom:36px}.chip.b{right:36px;top:36px}
+.shot img{display:block;width:100%;height:340px;object-fit:cover}
+.band{border-bottom:1px solid var(--ln);padding:44px 22px}
+.band .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;text-align:center}
+.band b{display:block;font-size:2.4rem;font-weight:800;letter-spacing:-.04em;color:var(--ac)}
+.band span{color:var(--mu);font-size:.95rem}
+.feature{position:relative;margin-top:64px;border-radius:28px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;background:#000}
+.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.feature::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),rgba(0,0,0,0) 65%);z-index:1}
+.feature .t{position:relative;z-index:2;padding:40px;max-width:640px}
+.feature h3{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em}
+.feature p{color:#d2d2d7;margin-top:10px}
+@media(max-width:734px){.chip{position:static;display:inline-block;margin:10px 6px 0}.heroimg img{border-radius:20px}.shot img{height:260px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#c0262b"/><path d="M14 21q9-5 16 0v25q-7-5-16 0z" fill="#fff"/><path d="M34 21q7-5 16 0v25q-9-5-16 0z" fill="#fff"/><path d="M32 21v25" stroke="#c0262b" stroke-width="2"/></symbol>
+</defs></svg>
+
+<nav><div class="nav"><a class="logo" href="#home"><svg role="img" aria-label="Pause and Page logo"><use href="#logo"/></svg>Pause &amp; Page</a>
+<div class="links"><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#evidence">Evidence</a><a href="#faq">FAQ</a><a href="#about">About</a><a class="pill sm" href="#join">Join</a></div></div></nav>
+
+<header id="home" class="dk hero c"><div class="wrap">
+<svg width="84" height="84" style="margin-bottom:24px" role="img" aria-label="Pause and Page logo"><use href="#logo"/></svg>
+<p class="eb">A reading club for teenagers in Hanoi</p>
+<h1>Put the phone down.<br><span class="grad">Pick the story up.</span></h1>
+<p class="sub">Our mission is to give Hanoi teenagers a calm, screen-free place where reading feels like a treat, not homework.</p>
+<div class="acts"><a class="pill" href="#join">Join the club</a><a class="lnk" href="#solution">See how it works</a></div></div>
+<div class="heroimg"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 850'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23661515'/%3E%3Cstop offset='1' stop-color='%231a0a0a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='850' fill='url(%23g)'/%3E%3C/svg%3E" alt="Hanoi students in school uniform with red neckties reading quietly at a library table" width="1500" height="797"><div class="chip a">Every Saturday · 9:00–11:00<small>Two calm hours in Hanoi</small></div><div class="chip b">Phones in airplane mode<small>100% focus on the page</small></div></div>
+</header>
+<div class="band"><div class="wrap"><div><b>2 hours</b><span>of screen-free reading every week</span></div><div><b>300,000</b><span>Hanoi student entries in the 2026 reading contest</span></div><div><b>0 grades</b><span>no pressure, no page targets</span></div></div></div>
+
+<section id="problem" class="lt2"><div class="wrap">
+<div class="c rv"><p class="eb">The problem</p><h2>Screens are taking over<br>teenage free time.</h2>
+<p class="sub">Teenagers, parents and schools are all affected. Long screen time can bring tired eyes, poor sleep, anxiety and less real conversation.</p></div>
+<div class="bento">
+<div class="tile rv"><div class="big">~17%</div><h3>of young Vietnamese go online 8+ hours a day.</h3><p class="src">Youth Research Institute, via VTV, 28 Nov 2025</p></div>
+<div class="tile rv"><div class="big">5–7 h</div><h3>is the daily internet use of 12–15 year-olds.</h3><p>About 82% of 12–13 and 93% of 14–15 year-olds go online every day.</p><p class="src">UNICEF survey, via VTV</p></div>
+<div class="tile rv"><div class="big">2–3 h</div><h3>is the most health groups recommend.</h3><p class="src">Health recommendation, via VTV</p></div>
+</div></div></section>
+
+<section id="solution" class="dk"><div class="wrap">
+<div class="c rv"><p class="eb">Our solution</p><h2>Two quiet hours.<br>Every Saturday.</h2>
+<p class="sub">Pause &amp; Page meets <b>every Saturday, 9:00–11:00</b>, in a green, open community space in Hanoi. Phones go into airplane mode at the door. Nothing is graded.</p></div>
+<div class="bento">
+<div class="tile rv"><div class="time">9:00</div><h3>Bonding</h3><p>Ice-breaking games, a book quiz and a tea break with snacks.</p></div>
+<div class="tile rv"><div class="time">9:20</div><h3>Silent Reading</h3><p>15–30 minutes of calm reading with lo-fi music or rain sounds.</p></div>
+<div class="tile rv"><div class="time">9:50</div><h3>Circle talk</h3><p>Small groups share feelings about the book. No right or wrong answers.</p></div>
+<div class="tile rv"><div class="time">10:20</div><h3>Skills workshop</h3><p>Speed reading, Scribble and Mind Map notes, creative book reviews.</p></div>
+</div>
+<div class="bento">
+<div class="tile img rv"><div class="shot"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 340'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23336b45'/%3E%3Cstop offset='1' stop-color='%23122318'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='340' fill='url(%23g)'/%3E%3C/svg%3E" alt="A Hanoi student reading a book from a green shelf outdoors while classmates read behind him" loading="lazy"></div><div class="t"><h3>Read anywhere.</h3><p>Reading outdoors is part of our monthly plan, with books always within reach.</p></div></div>
+<div class="tile img rv"><div class="shot"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 340'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23446a3a'/%3E%3Cstop offset='1' stop-color='%23181f14'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='340' fill='url(%23g)'/%3E%3C/svg%3E" alt="Two girls with glasses reading books at an outdoor book stall in Hanoi" loading="lazy"></div><div class="t"><h3>Find your next favourite book.</h3><p>A green, phone-free clubroom with beanbags, plants and a wall for member quotes and drawings.</p></div></div>
+</div>
+<div class="bento">
+<div class="tile rv"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#ff5a5f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="4"/><path d="M8 8l32 32"/></svg><h3>Device-free</h3><p>Phones off or in airplane mode, so all attention goes to the page.</p></div>
+<div class="tile rv"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#ff5a5f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 40V14M24 14c-5-4-12-4-17-2v26c5-2 12-2 17 2 5-4 12-4 17-2V12c-5-2-12-2-17 2z"/></svg><h3>No pressure</h3><p>No grades and no page targets. Reading is a treat, not homework.</p></div>
+<div class="tile rv"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="#ff5a5f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 42S6 31 6 18a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 13-18 24-18 24z"/></svg><h3>Give back</h3><p>Book swap days, book drives for mountain schools and reading campaigns at school.</p></div>
+</div><div class="feature rv"><img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 440'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b4a7a'/%3E%3Cstop offset='1' stop-color='%23101826'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='440' fill='url(%23g)'/%3E%3C/svg%3E" alt="Crowd of Hanoi students in blue jackets browsing tables of books at a book fair" loading="lazy"><div class="t"><h3>Book days bring Hanoi together.</h3><p>Book swaps and reading campaigns turn a quiet hobby into a community event.</p></div></div></div></section>
+
+<section id="evidence"><div class="wrap">
+<div class="c rv"><p class="eb">Evidence</p><h2>The need is real.<br>So is the love of books.</h2>
+<p class="sub">Teenagers use screens far beyond the healthy limit, yet Hanoi students clearly love reading when they are given a stage.</p></div>
+<div class="bars rv" role="img" aria-label="Bar chart: recommended maximum 2 to 3 hours, typical teen use 5 to 7 hours, heavy users 8 hours or more">
+<div class="bar"><span>Recommended maximum</span><div class="track"><div class="fill" style="width:25%">2–3 h</div></div></div>
+<div class="bar"><span>Typical teen use</span><div class="track"><div class="fill w" style="width:60%">5–7 h</div></div></div>
+<div class="bar"><span>Heavy users</span><div class="track"><div class="fill w" style="width:82%">8 h+</div></div></div>
+<p class="cap">Hours of screen time per day. Sources: VTV (28 Nov 2025), citing UNICEF and the Youth Research Institute.</p></div>
+<div class="bento">
+<div class="tile lt2 rv" style="background:var(--bg2)"><div class="big">300,000</div><h3>entries from Hanoi students in the 2026 Reading Culture Ambassador contest.</h3></div>
+<div class="tile rv" style="background:var(--bg2)"><div class="big">130</div><h3>prizes awarded on 12 September 2026.</h3><p>Winning ideas included reading clubs, book festivals and book drives for remote areas.</p><p class="src">Source: Hànộimới newspaper, 12 Sep 2026</p></div>
+</div>
+<div class="bento">
+<blockquote class="rv" style="background:var(--bg2)"><p>"Using my phone for a long time is a habit now."</p><cite>University student, paraphrased from VTV (translated from Vietnamese)</cite></blockquote>
+<blockquote class="rv" style="background:var(--bg2)"><p>"We must build playgrounds for young people. With the right ones, they will leave the screen behind."</p><cite>School principal, paraphrased from VTV (translated from Vietnamese)</cite></blockquote>
+</div>
+<p class="sub c rv" style="margin-top:48px">One school already proved it: after adding music, cinema and sports at break time, students put their phones away. Pause &amp; Page brings that idea to reading.</p>
+</div></section>
+
+<section id="faq" class="lt2"><div class="wrap" style="max-width:760px">
+<div class="c rv" style="margin-bottom:48px"><p class="eb">FAQ</p><h2>Common questions</h2></div>
+<details class="rv"><summary>"Reading is boring. Why give up my Saturday?"</summary><p>Reading here is a treat, not homework. There is no grading and no page target. You get snacks, music, games and new friends, and you choose your own book.</p></details>
+<details class="rv"><summary>"I read slowly, or I don't read much."</summary><p>You are exactly who we want. Our workshops teach speed reading and note-taking, and our circle talks have no wrong answers.</p></details>
+<details class="rv"><summary>"Do I really have to turn off my phone?"</summary><p>Yes, but only for two hours. Airplane mode is enough. Many members say the break feels like a relief.</p></details>
+<details class="rv"><summary>"Is it free?"</summary><p>Yes. We ask members to bring one book to share. Snacks are supported by donations.</p></details>
+</div></section>
+
+<section id="join" class="join c"><div class="wrap" style="max-width:700px">
+<div class="rv"><svg width="64" height="64" style="margin-bottom:20px" aria-hidden="true"><use href="#logo"/></svg><h2>Save your seat<br>this Saturday.</h2>
+<p class="sub" style="color:#f1c9c9">Tap the button to open our sign-up form. Parents, teachers and sponsors are welcome to write to us too.</p></div>
+<div class="acts" style="margin-top:48px"><a class="pill" href="https://cuong029009.wixforms.com/f/7516031373652526096" target="_blank" rel="noopener">Sign up now</a></div>
+<p class="cap" style="color:#f1c9c9;margin-top:24px">Or write to us directly: <a href="mailto:hello@pauseandpage.example" style="color:#fff">hello@pauseandpage.example</a></p>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="c rv"><p class="eb">About us</p><h2>Teenagers who love books,<br>for teenagers.</h2>
+<p class="sub">We are Hanoi students who noticed how little time we and our friends spend away from screens. We started this club because reading changed how we feel, and we want to share that.</p></div>
+<div class="bento">
+<div class="tile rv" style="background:var(--bg2)"><div class="ava">F</div><h3>Founder</h3><p>Leads the club and plans the weekly programme.</p></div>
+<div class="tile rv" style="background:var(--bg2)"><div class="ava">W</div><h3>Workshop team</h3><p>Runs speed reading, mind map and book review sessions.</p></div>
+<div class="tile rv" style="background:var(--bg2)"><div class="ava">C</div><h3>Community team</h3><p>Organises book swaps, book drives and school campaigns.</p></div>
+</div></div></section>
+
+<footer><a class="logo" href="#home"><svg aria-hidden="true"><use href="#logo"/></svg>Pause &amp; Page</a>
+<p>© 2026 Pause &amp; Page, Hanoi. The logo was created for this website. Photos show Hanoi students reading; credits to the original photographers.</p>
+<p style="margin-top:6px">Sources: <a href="https://vtv.vn/nhieu-ban-tre-danh-9-13-tieng-ngay-cho-dien-thoai-va-mang-xa-hoi-100251128134046742.htm" target="_blank" rel="noopener">VTV</a> · <a href="https://hanoimoi.vn/vinh-danh-cac-dai-su-van-hoa-doc-thanh-pho-ha-noi-nam-2026-1756269.html" target="_blank" rel="noopener">Hànộimới</a></p></footer>
+
+<script>
+(function(){
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
